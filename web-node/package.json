@@ -1,0 +1,17 @@
+{
+  "name": "web-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveLas/polyglot-web-node"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "request": "^2.71.0"
+  }
+}
