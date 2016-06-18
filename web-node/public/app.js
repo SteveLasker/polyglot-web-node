@@ -2,7 +2,6 @@ var app = angular.module('myApp', ['ngRoute']);
     app.controller('MainController', function($scope, $http) {
 
     $scope.messages = [];
-    $scope.OS ="Manually Stuffed"
     $scope.sayHelloToServer = function() {
         $http.get("/api").then(function(response) {
             $scope.messages.push(response.data);

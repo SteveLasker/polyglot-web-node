@@ -7,8 +7,10 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(require("morgan")("dev"));
 
+var apiPort = process.env.APIPORT || 5000
+var requestApi = "http://api-dotnet:"+apiPort+"/api/hello";
 app.get('/api', function (req, res) {
-    request('http://api-dotnet:5000/api/hello', function (error, response, body) {
+    request(requestApi, function (error, response, body) {
         res.send('From api-dotnet: ' + body);
     });    
 });
@@ -17,7 +19,7 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Listening on port " + port);
 });
