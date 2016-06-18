@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  api-dotnet:
+    image: stevelasker/api-dotnet
+  web-node:
+    image: stevelasker/web-node:debug
+    ports:
+      - "8080:80"
+      - "5858:5858"
+    volumes:
+      - .:/src
+    environment:
+      - REMOTE_DEBUGGING
