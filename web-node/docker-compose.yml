@@ -4,7 +4,7 @@ services:
   web-node:
     image: stevelasker/web-node
     ports:
-      - "8080:80"
+      - "8080:3000"
     environment:
-      - PORT=80
+      - HTTPPORT=3000
       - APIPORT=5000

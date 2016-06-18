@@ -4,5 +4,5 @@ COPY package.json /src
 RUN npm install
 COPY . /src
 WORKDIR /src
-EXPOSE 80
+EXPOSE 3000
 ENTRYPOINT ["node", "./bin/www"]
