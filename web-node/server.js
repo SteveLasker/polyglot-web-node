@@ -9,7 +9,7 @@ app.use(require("morgan")("dev"));
 
 app.get('/api', function (req, res) {
     request('http://api-dotnet:5000/api/hello', function (error, response, body) {
-        res.send('MM From api-dotnet: ' + body);
+        res.send('From api-dotnet: ' + body);
     });    
 });
 
