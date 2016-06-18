@@ -6,9 +6,11 @@ services:
   web-node:
     image: stevelasker/web-node:debug
     ports:
-      - "8080:3000"
+      - "80:80"
       - "5858:5858"
     volumes:
       - .:/src
     environment:
       - REMOTE_DEBUGGING=1
+      - PORT=80
+      - APIPORT=5000

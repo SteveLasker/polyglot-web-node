@@ -7,8 +7,10 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(require("morgan")("dev"));
 
+var apiPort = process.env.APIPORT || 5000
+var requestApi = "http://api-dotnet:"+apiPort+"/api/hello";
 app.get('/api', function (req, res) {
-    request('http://api-dotnet:5000/api/hello', function (error, response, body) {
+    request(requestApi, function (error, response, body) {
         res.send('From api-dotnet: ' + body);
     });    
 });
