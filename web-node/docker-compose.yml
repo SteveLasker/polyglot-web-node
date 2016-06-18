@@ -1,7 +1,0 @@
-version: '2'
-
-services:
-  web-node:
-    image: stevelasker/web-node
-    ports:
-      - "8080:80"
