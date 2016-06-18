@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.HTTPPORT || 3000;
 app.listen(port, function () {
     console.log("Listening on port " + port);
 });
