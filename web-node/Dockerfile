@@ -5,4 +5,4 @@ RUN npm install
 COPY . /src
 WORKDIR /src
 EXPOSE 3000
-ENTRYPOINT ["node", "./bin/www"]
+ENTRYPOINT ["node", "server.js"]
