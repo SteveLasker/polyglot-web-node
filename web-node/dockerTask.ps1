@@ -34,7 +34,7 @@ Param(
 
 $imageName="stevelasker/web-node"
 $projectName="webnode"
-$publicPort=80
+$publicPort=3000
 $isWebProject=$true
 $url="http://docker:$publicPort"
 
