@@ -1,8 +1,7 @@
 FROM node
-RUN mkdir /src
-COPY package.json /src
-RUN npm install
-COPY . /src
 WORKDIR /src
+COPY package.json .
+RUN npm install
+COPY . .
 EXPOSE 3000
-ENTRYPOINT ["node", "server.js"]
+ENTRYPOINT node server.js
