@@ -12,7 +12,7 @@ var apiURL = process.env.APIURL || "apidotnet"
 var requestApi = "http://"+apiURL+":"+apiPort+"/api/hello";
 app.get('/api', function (req, res) {
     request(requestApi, function (error, response, body) {
-        res.send('From ' + requestAPI + "-->" + body);
+        res.send('From ' + requestApi + "-->" + body);
     });    
 });
 
