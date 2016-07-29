@@ -1,9 +1,11 @@
 version: '2'
 
 services:
-  api-dotnet:
-    image: stevelasker/api-dotnet:debug
-  web-node:
+  apidotnet:
+    image: stevelasker/api-dotnet
+    ports:
+      - "5000:5000"
+  webnode:
     image: stevelasker/web-node:debug
     ports:
       - "3000:3000"
@@ -14,4 +16,4 @@ services:
       - REMOTE_DEBUGGING
       - HTTPPORT=3000
       - APIPORT=5000
-      - APIURL=asp-dotnet
+      - APIURL=apidotnet

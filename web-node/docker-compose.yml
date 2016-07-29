@@ -1,13 +1,13 @@
 version: '2'
 
 services:
-  api-dotnet:
+  apidotnet:
     image: stevelasker/api-dotnet
-  web-node:
+  webnode:
     image: stevelasker/web-node
     ports:
       - "3000:3000"
     environment:
       - HTTPPORT=3000
       - APIPORT=5000
-      - APIURL=asp-dotnet
+      - APIURL=apidotnet

@@ -8,11 +8,11 @@ app.use(express.static(__dirname + '/public'));
 app.use(require("morgan")("dev"));
 
 var apiPort = process.env.APIPORT || 5000
-var apiURL = process.env.APIURL || "api-dotnet"
+var apiURL = process.env.APIURL || "apidotnet"
 var requestApi = "http://"+apiURL+":"+apiPort+"/api/hello";
 app.get('/api', function (req, res) {
     request(requestApi, function (error, response, body) {
-        res.send('From api-dotnet: ' + body);
+        res.send('From ' + requestAPI + "-->" + body);
     });    
 });
 
