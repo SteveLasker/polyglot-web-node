@@ -10,7 +10,7 @@ services:
       - "com.microsot.cisualstudio.targetoperatingsyste=linux"
     environment:
       - REMOTE_DEBUGGING
-    EXPOSE: 5858
+    PORTS: "5858:5858"
     volumes:
       - .:/src
       - ~/.node/packages:/root/node/packages:ro
