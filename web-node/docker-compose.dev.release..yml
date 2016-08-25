@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  webnode:
+    labels:
+      - "com.microsot.cisualstudio.targetoperatingsyste=linux"
+    environment:
+      - REMOTE_DEBUGGING
+    entrypoint:  ["/bin/bash", "-c", "if [ -z \"$REMOTE_DEBUGGING\" ]; then nodemon -L --debug; else nodemon -L --debug-brk; fi"]
